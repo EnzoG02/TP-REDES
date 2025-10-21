@@ -1,0 +1,15 @@
+
+services:
+  bind9:
+    image: ubuntu/bind9:latest
+    container_name: servidor-dns
+    ports:
+      # Mapeamos el puerto 53 (TCP y UDP) del contenedor a nuestra máquina
+      - "53:53/tcp"
+      - "53:53/udp"
+    volumes:
+# Montamos nuestro archivo de config local específico
+      - ./config/named.conf.local:/etc/bind/named.conf.local
+      # Montamos nuestro directorio de zonas
+      - ./zones:/etc/bind/zones
+    restart: unless-stopped

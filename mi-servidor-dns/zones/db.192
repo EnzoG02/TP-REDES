@@ -1,0 +1,20 @@
+;
+; Archivo de zona inversa para la red 192.168.1.x
+;
+$TTL    604800
+@       IN      SOA     ns1.proyecto.redes. admin.proyecto.redes. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns1.proyecto.redes.
+
+; Registros inversos (IP -> Nombre)
+100     IN      PTR     ns1.proyecto.redes.
+101     IN      PTR     www.proyecto.redes.
+50      IN      PTR     pc1.proyecto.redes.
+13     IN      PTR     enzo.proyecto.redes.
+102     IN      PTR     webmail.miempresa.com.
+103     IN      PTR     www.miempresa.com.

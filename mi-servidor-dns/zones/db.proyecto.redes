@@ -1,0 +1,19 @@
+;
+; Archivo de zona DIRECTA para proyecto.redes
+;
+$TTL    604800
+@       IN      SOA     ns1.proyecto.redes. admin.proyecto.redes. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+; Servidor de Nombres (NS Record) - 
+@       IN      NS      ns1.proyecto.redes.
+
+; Registros de la zona (A Records)
+ns1     IN      A       192.168.1.100   ; IP del servidor 
+www     IN      A       192.168.1.101   ; IP del servidor web de ejemplo
+pc1     IN      A       192.168.1.50    ; IP del PC cliente de ejemplo
+enzo     IN      A       192.168.1.13   ; IP del PC cliente de ejemplo

@@ -1,0 +1,16 @@
+// Nuestra nueva zona de búsqueda directa
+zone "proyecto.redes" {
+    type master;
+    file "/etc/bind/zones/db.proyecto.redes"; // Ruta al archivo de registros
+};
+
+zone "miempresa.com" {
+    type master;
+    file "/etc/bind/zones/db.miempresa.com"; 
+};
+
+// Nuestra zona de búsqueda inversa
+zone "1.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.192"; 
+};
